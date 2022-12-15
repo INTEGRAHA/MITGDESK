@@ -52,7 +52,9 @@
 				<div class="row justify-content-center">
 					<div class="col-lg-5 text-center mx-auto">
 						<h1 class="text-white mb-2 mt-5">Welcome!</h1>
-						<p class="text-lead text-white">Use these awesome forms to login or create new account in your project for free.</p>
+						<p class="text-lead text-white">
+							Register your account to get started.
+						</p>
 					</div>
 				</div>
 			</div>
@@ -110,21 +112,26 @@
 						</div> -->
 						<div class="card-body">
 							<h5 class="card-title text-center mb-4">Sign Up</h5>
-							<form role="form">
+							<form role="form" method="post" action="<?= base_url('auth/registration'); ?>">
 								<div class="mb-3">
-									<input type="text" class="form-control" placeholder="Name" aria-label="Name">
+									<input type="text" name="name" class="form-control" placeholder="Name" aria-label="Name">
+									<?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
 								</div>
 								<div class="mb-3">
-									<input type="text" class="form-control" placeholder="Name" aria-label="Name">
+									<input type="email" name="email" class="form-control" placeholder="Email" aria-label="Email">
+									<?= form_error('email', '<small class="text-danger pl-3">', '</small>'); ?>
 								</div>
-								<div class="mb-3">
-									<input type="email" class="form-control" placeholder="Email" aria-label="Email">
-								</div>
-								<div class="mb-3">
-									<input type="password" class="form-control" placeholder="Password" aria-label="Password">
+								<div class="mb-3 row">
+									<div class="col-sm-6 mb-3 mb-sm-0">
+										<input type="password" name="password" class="form-control" placeholder="Password" aria-label="Password">
+									</div>
+									<div class="col-sm-6">
+										<input type="password" name="confirm-password" class="form-control" placeholder="Confirm Password" aria-label="Password">
+									</div>
+									<?= form_error('password', '<small class="text-danger pl-3">', '</small>'); ?>
 								</div>
 								<div class="text-center">
-									<button type="button" class="btn bg-gradient-dark w-100 my-4 mb-2">Sign up</button>
+									<button type="submit" class="btn bg-gradient-dark w-100 my-4 mb-2">Sign up</button>
 								</div>
 								<p class="text-sm mt-3 mb-0">Already have an account? <a href="<?= base_url('auth') ?>" class="text-dark font-weight-bolder">Sign in</a></p>
 							</form>
@@ -152,7 +159,7 @@
 			</div>
 			<div class="row">
 				<div class="col-8 mx-auto text-center mt-1">
-					<p class="mb-0 text-secondary">Copyright © <?= date('Y') ?>.
+					<p class="mb-0 text-secondary lead text-sm">Copyright © <?= date('Y') ?>.
 						MITG Desk by <span class="text-danger fw-bold">MITG</span> <span class="text-secondary fw-bold">Group</span>.
 					</p>
 				</div>
