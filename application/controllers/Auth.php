@@ -21,7 +21,9 @@ class Auth extends CI_Controller
 		$this->form_validation->set_rules('password', 'Password', 'trim|required');
 
 		if ($this->form_validation->run() == FALSE) {
+			$this->load->view('content/auth/template/header');
 			$this->load->view('content/auth/sign_in');
+			$this->load->view('content/auth/template/footer');
 		} else {
 			$this->submit_login();
 		}
@@ -45,7 +47,9 @@ class Auth extends CI_Controller
 		$this->form_validation->set_rules('confirm-password', 'Confirm Password', 'required|trim|matches[password]');
 
 		if ($this->form_validation->run() == FALSE) {
+			$this->load->view('content/auth/template/header');
 			$this->load->view('content/auth/sign_up');
+			$this->load->view('content/auth/template/footer');
 		} else {
 			$this->submit_register();
 		}
