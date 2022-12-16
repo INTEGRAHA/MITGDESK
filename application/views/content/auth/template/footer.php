@@ -8,7 +8,7 @@
             <span class="text-lg text-primary fab fa-facebook"></span>
           </a>
           <a href="https://multiintegra.co.id/" target="_blank" class="text-secondary me-xl-4 me-4">
-            <span class="text-lg text-primary fa fa-internet-explorer"></span>
+            <span class="text-lg text-primary fa fa-globe"></span>
           </a>
           <a href="https://www.instagram.com/multiintegratechnologygroup/?hl=id" target="_blank" class="text-secondary me-xl-4 me-4">
             <span class="text-lg text-primary fab fa-instagram"></span>
@@ -30,19 +30,10 @@
   <script src="<?= base_url('assets/vendor/argon-dashboard-master/') ?>assets/js/core/bootstrap.min.js"></script>
   <script src="<?= base_url('assets/vendor/argon-dashboard-master/') ?>assets/js/plugins/perfect-scrollbar.min.js"></script>
   <script src="<?= base_url('assets/vendor/argon-dashboard-master/') ?>assets/js/plugins/smooth-scrollbar.min.js"></script>
-  <script>
-    var win = navigator.platform.indexOf('Win') > -1;
-    if (win && document.querySelector('#sidenav-scrollbar')) {
-      var options = {
-        damping: '0.5'
-      }
-      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
-    }
-  </script>
   <!-- Github buttons -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="<?= base_url('assets/vendor/argon-dashboard-master/') ?>assets/js/argon-dashboard.min.js?v=2.0.4"></script>
-</body>
+  </body>
 
-</html>
+  </html>

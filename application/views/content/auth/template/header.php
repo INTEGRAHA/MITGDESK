@@ -18,8 +18,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="apple-touch-icon" sizes="76x76" href="<?= base_url('assets/vendor/argon-dashboard-master/') ?>assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="<?= base_url('assets/vendor/argon-dashboard-master/') ?>assets/img/favicon.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="<?= base_url('assets/images/favicon.ico') ?>">
+  <link rel="icon" type="image/png" href="<?= base_url('assets/images/favicon.ico') ?>">
   <title>
     MITG Desk
   </title>
@@ -40,9 +40,32 @@
   <nav class="navbar navbar-expand-lg position-absolute top-0 z-index-3 w-100 shadow-none my-3 navbar-transparent mt-4">
     <div class="container">
       <a class="navbar-brand font-weight-bolder ms-lg-0 ms-3 text-white" href="<?= base_url('assets/vendor/argon-dashboard-master/') ?>pages/dashboard.html" style="font-size: 20px">
-        <i class="fa fa-ticket text-white"></i> MITG Desk
+        <img src="<?= base_url('assets/images/logo.png') ?>" alt="MITG Logo" class="img-fluid" width="100" /> MITG Desk
       </a>
     </div>
   </nav>
   <!-- End Navbar -->
   <main class="main-content mt-0">
+    <!-- Carousel -->
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="<?= base_url('assets/images/slider/1.png') ?>" class="d-block w-100" alt="VHF">
+        </div>
+        <div class="carousel-item">
+          <img src="<?= base_url('assets/images/slider/2.png') ?>" class="d-block w-100" alt="Simulator">
+        </div>
+        <div class="carousel-item">
+          <img src="<?= base_url('assets/images/slider/3.png') ?>" class="d-block w-100" alt="Sailor">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- End Carousel -->
